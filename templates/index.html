@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Downloader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📥 Instagram Downloader</h1>
+        <input type="text" id="url" placeholder="Enter Instagram Post/Reel URL" required>
+        <button onclick="startDownload()">Download</button>
+
+        <div id="progress-container" style="display: none;">
+            <div id="progress-bar"></div>
+            <p id="progress-text">Downloading...</p>
+        </div>
+
+        <p class="note">Paste a valid Instagram post or reel link to download.</p>
+        <p id="error-message" class="error"></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
